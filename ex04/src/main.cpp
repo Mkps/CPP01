@@ -1,6 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aloubier <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/08/31 07:12:16 by aloubier          #+#    #+#             */
+/*   Updated: 2023/08/31 07:13:34 by aloubier         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../inc/Sed.hpp"
-#include <algorithm>
-#include <string>
 
 std::string	replaceStrLine(std::string line, std::string replaceStr, std::string newStr)
 {
