@@ -60,10 +60,10 @@ int	main(int ac, char **av)
 	}
 	outputFile_name = av[1];
 	outputFile_name.append(".replace");
-	outputFile.open(&outputFile_name[0], std::ofstream::out);
+	outputFile.open(outputFile_name.c_str(), std::ofstream::out);
 	if (!outputFile.is_open())
 	{
-		std::cout << "Failed to open output file " << av[1] << std::endl;
+		std::cout << "Failed to open output file " << outputFile_name << std::endl;
 		inputFile.close();
 		return (0);
 	}
