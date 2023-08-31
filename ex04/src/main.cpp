@@ -11,17 +11,28 @@
 /* ************************************************************************** */
 
 #include "../inc/Sed.hpp"
+#include <cstddef>
+
+size_t	ft_find(std::string str, std::string substr)
+{
+	for (size_t i = 0; i < str.length(); i++)
+	{
+		if (str.compare(i, substr.length(), substr) == 0)
+			return (i);
+	}
+	return (std::string::npos);
+}
 
 std::string	replaceStrLine(std::string line, std::string replaceStr, std::string newStr)
 {
 	size_t index;
 
-	index = line.find(replaceStr);
+	index = ft_find(line, replaceStr);
 	while (index != std::string::npos)
 	{
 		line.erase(index, replaceStr.length());
 		line.insert(index, newStr); 
-		index = line.find(replaceStr);
+		index = ft_find(line, replaceStr);
 	}
 	return (line);
 }
