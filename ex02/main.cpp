@@ -12,17 +12,18 @@
 #include <iostream>
 int	main(void)
 {
-	std::string	str = "HI THIS IS BRAIN";
-	std::string *strPTR;
-	std::string &strREF = str;
+	std::string	string = "HI THIS IS BRAIN";
+	std::string *stringPTR;
+	std::string &stringREF = string;
 
-	strPTR = &str;
-	std::cout << "Memory address of the string variable: " << &str << "\n";
-	std::cout << "Memory address held by strPTR: " << &strPTR << "\n";
-	std::cout << "Memory address held by strREF: " << &strREF << "\n";
-	std::cout << "The value of the string variable: " << str << "\n";
-	std::cout << "The value pointed by strPTR: " << *strPTR << "\n";
-	std::cout << "The value pointed by strREF: " << strREF << std::endl; 
+	stringPTR = &string;
+	std::cout << "Memory address of the string variable: " << &string<< std::endl;
+	std::cout << "Memory address held by stringPTR: " << stringPTR << std::endl;
+	std::cout << "Memory address held by stringREF: " << &stringREF << std::endl;
+    std::cout << std::endl;
+	std::cout << "The value of the string variable: " << string << std::endl;
+	std::cout << "The value pointed by stringPTR: " << *stringPTR << std::endl;
+	std::cout << "The value pointed by stringREF: " << stringREF << std::endl; 
 
 	return (0);
 }
