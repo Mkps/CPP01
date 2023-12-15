@@ -10,8 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string>
-#include <iostream>
+#ifndef ZOMBIE_HPP
+# define ZOMBIE_HPP
+
+# include <string>
+# include <iostream>
+
 class Zombie {
 public:
 	Zombie	();
@@ -25,3 +29,5 @@ private:
 };
 
 Zombie	*zombieHorde(int N, std::string name);
+
+#endif
