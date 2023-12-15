@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aloubier <alex.loubiere@42.fr>             +#+  +:+       +#+        */
+/*   By: aloubier <aloubier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 10:33:24 by aloubier          #+#    #+#             */
-/*   Updated: 2023/12/15 10:33:25 by aloubier         ###   ########.fr       */
+/*   Updated: 2023/12/15 17:30:36 by aloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,11 @@
 # include <iostream>
 # include <string>
 
-#define RESET   "\033[0m"
-#define RED     "\033[31m"      /* Red */
-#define GREEN   "\033[32m"      /* Green */
-#define YELLOW  "\033[33m"      /* Yellow */
-#define BLUE    "\033[34m"      /* Blue */
+# define RESET   "\033[0m"
+# define RED     "\033[31m"      /* Red */
+# define GREEN   "\033[32m"      /* Green */
+# define YELLOW  "\033[33m"      /* Yellow */
+# define BLUE    "\033[34m"      /* Blue */
 
 class Harl{
 public:
