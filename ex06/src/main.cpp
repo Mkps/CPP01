@@ -9,7 +9,8 @@
 /*   Updated: 2023/08/31 18:04:04 by aloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <iostream>
+#include "../inc/Harl.hpp"
+
 enum level {
 	debug,
 	info,
@@ -17,6 +18,7 @@ enum level {
 	error,
 	level_invalid
 };
+
 int	strToLevel(std::string str)
 {
 	if (!str.compare("DEBUG"))
@@ -35,17 +37,26 @@ int	main(int ac, char **av)
 	if (ac != 2)
 		return (0);
 	std::string	str(av[1]);
+	Harl dude;
 	int level = strToLevel(str);
-	std::cout << "level is: " << level << std::endl;
 	switch	(level){
 		case debug:
-			std::cout << "DEBUG\n";
+			dude.complain("DEBUG");
+			dude.complain("INFO");
+			dude.complain("WARNING");
+			dude.complain("ERROR");
+			break;
 		case info:
-			std::cout << "INFO\n";
+			dude.complain("INFO");
+			dude.complain("WARNING");
+			dude.complain("ERROR");
+			break;
 		case warning:
-			std::cout << "WARNING\n";
+			dude.complain("WARNING");
+			dude.complain("ERROR");
+			break;
 		case error:
-			std::cout << "ERROR\n";
+			dude.complain("ERROR");
 			break;
 		default:
 			std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
