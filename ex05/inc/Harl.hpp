@@ -1,3 +1,6 @@
+#ifndef HARL_HPP
+# define HARL_HPP
+
 # include <iostream>
 
 #define RESET   "\033[0m"
@@ -19,3 +22,5 @@ private:
 	void	error(void);
 	
 };
+
+#endif
