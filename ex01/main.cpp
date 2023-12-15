@@ -20,7 +20,10 @@ int	main(void)
 	count = 12;
 	Horde = zombieHorde(count, "Tom");
 	for (int i = 0; i < count; i++)
+    {
+        std::cout << "Zombie number " << i + 1 << " : ";
 		Horde[i].announce();	
+    }
 	delete[] Horde;
 	return (0);
 }

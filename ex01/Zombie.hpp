@@ -24,4 +24,4 @@ private:
 	std::string	name;
 };
 
-Zombie	*zombieHorde(int z_count, std::string name);
+Zombie	*zombieHorde(int N, std::string name);
