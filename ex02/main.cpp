@@ -3,13 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aloubier <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: aloubier <alex.loubiere@42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 16:15:14 by aloubier          #+#    #+#             */
-/*   Updated: 2023/08/30 16:27:15 by aloubier         ###   ########.fr       */
+/*   Updated: 2023/12/15 10:38:07 by aloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <iostream>
+
 int	main(void)
 {
 	std::string	string = "HI THIS IS BRAIN";

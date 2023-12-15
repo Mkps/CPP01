@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Sed.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aloubier <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: aloubier <alex.loubiere@42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 07:12:06 by aloubier          #+#    #+#             */
-/*   Updated: 2023/08/31 07:13:36 by aloubier         ###   ########.fr       */
+/*   Updated: 2023/12/15 10:35:38 by aloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,6 @@
 
 # include <iostream>
 # include <fstream>
+# include <cstddef>
 
 #endif
