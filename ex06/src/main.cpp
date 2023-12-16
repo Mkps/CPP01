@@ -22,17 +22,17 @@ enum level {
 
 int	strToLevel(std::string str)
 {
-	if (!str.compare("DEBUG"))
-		return (debug);
-	if (!str.compare("INFO"))
-		return (info);
-	if (!str.compare("WARNING"))
-		return (warning);
-	if (!str.compare("ERROR"))
-		return (error);
+	std::string	level[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+
+	int i = 0;
+	while (i <= 3 && str.compare(level[i]))
+		i++;
+	if (i <= 3)
+        return (i);
 	else
 		return (level_invalid);
 }
+
 int	main(int ac, char **av)
 {
 	if (ac != 2)
