@@ -22,15 +22,28 @@ size_t	ft_find(std::string str, std::string substr)
 	return (std::string::npos);
 }
 
+size_t	ft_elem_count(std::string str, std::string substr)
+{
+    size_t elem = 0;
+	for (size_t i = 0; i < str.length(); i++)
+	{
+		if (str.compare(i, substr.length(), substr) == 0)
+            elem++;
+	}
+    return (elem);
+}
+
 std::string	replaceStrLine(std::string line, std::string replaceStr, std::string newStr)
 {
-	size_t index;
+	size_t  index, elem;
 
+    elem = ft_elem_count(line, replaceStr);
 	index = ft_find(line, replaceStr);
-	while (index != std::string::npos)
+	while (index != std::string::npos && elem)
 	{
 		line.erase(index, replaceStr.length());
 		line.insert(index, newStr); 
+        elem--;
 		index = ft_find(line, replaceStr);
 	}
 	return (line);
@@ -39,15 +52,18 @@ std::string	replaceStrLine(std::string line, std::string replaceStr, std::string
 int	main(int ac, char **av)
 {
 	std::string	line;
-	std::string	outputFile_name;
-	std::ofstream outputFile;
+	std::string	outputFilename;
+    std::ofstream outputFile;
 
 	if (ac != 4 )
+    {
+        std::cout << "Incorrect number of parameters" << std::endl;
 		return (0);
+    }
 	line = av[2];
 	if (line.empty())
 	{
-		std::cout << "A string to be replaced must be provided." << std::endl;
+		std::cout << "A string to be replaced must be provided" << std::endl;
 		return (0);
 	}
 	line.clear();
@@ -55,16 +71,15 @@ int	main(int ac, char **av)
 	if (!inputFile.is_open())
 	{
 		std::cout << "Failed to open input file " << av[1] << std::endl;
-		return (0);
+		return (1);
 	}
-	outputFile_name = av[1];
-	outputFile_name.append(".replace");
-	outputFile.open(outputFile_name.c_str(), std::ofstream::out);
+	outputFilename = outputFilename + av[1] + ".replace";
+	outputFile.open(outputFilename.c_str(), std::ofstream::out);
 	if (!outputFile.is_open())
 	{
-		std::cout << "Failed to open output file " << outputFile_name << std::endl;
+		std::cout << "Failed to open output file " << outputFilename << std::endl;
 		inputFile.close();
-		return (0);
+		return (1);
 	}
 	while (std::getline(inputFile, line))
 	{
