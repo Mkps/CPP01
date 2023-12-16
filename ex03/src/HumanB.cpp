@@ -31,7 +31,7 @@ std::string	getAttack(Weapon *weapon)
 }
 void	HumanB::attack(void)
 {
-	std::cout << this->name << " attacks with their " 
+	std::cout << this->name << " attacks with " 
 		<< getAttack(this->weapon) << std::endl;
 }
  
