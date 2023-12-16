@@ -37,6 +37,8 @@ std::string	replaceStrLine(std::string line, std::string replaceStr, std::string
 {
 	size_t  index, elem;
 
+    if (replaceStr.empty())
+        return (line);
     elem = ft_elem_count(line, replaceStr);
 	index = ft_find(line, replaceStr);
 	while (index != std::string::npos && elem)
@@ -60,13 +62,6 @@ int	main(int ac, char **av)
         std::cout << "Incorrect number of parameters" << std::endl;
 		return (0);
     }
-	line = av[2];
-	if (line.empty())
-	{
-		std::cout << "A string to be replaced must be provided" << std::endl;
-		return (0);
-	}
-	line.clear();
 	std::ifstream inputFile(av[1]);
 	if (!inputFile.is_open())
 	{
